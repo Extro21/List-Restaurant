@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_blue">#3772E7</color>
+    <color name="light_gray">#F3EDF7</color>
+    <color name="lilac_light">#6750A4</color>
+    <color name="lilac">#B69DF8</color>
+    <color name="nightThemeCard">#1A1B22</color>
+    <color name="on_surface_variant">#1A1B22</color>
+</resources>

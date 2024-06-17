@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ListRestaurants</string>
+    <string name="no_sort">No sorting</string>
+    <string name="min_sort">Ascending</string>
+    <string name="max_sort">Descending</string>
+    <string name="name">name:\u00A0</string>
+    <string name="address">address:\u00A0</string>
+    <string name="stars">stars:\u00A0</string>
+    <string name="distance">distance:\u00A0</string>
+    <string name="free_tables">Free tables:\u00A0</string>
+    <string name="default_sort">Default</string>
+    <string name="closer_center">Closer to the center</string>
+    <string name="further_center">Further from the center</string>
+    <string name="many_free_tables">Many free tables</string>
+    <string name="few_free_tables">Few free tables</string>
+    <string name="see_more">See more</string>
+    <string name="apply">Apply</string>
+    <string name="select_sort_type">Select sort type</string>
+    <string name="please_select_an_option">Please select an option</string>
+    <string name="table">table</string>
+    <string name="tables">tables</string>
+    <string name="rooms_available">%1$d %2$s</string>
+    <string name="coordinates_format">%1$s, %2$s</string>
+    <string name="from_center">from center</string>
+    <string name="from_center_format">%1$s %2$s</string>
+    <string name="loading_error_try_again_later">Loading error, try again later</string>
+    <string name="refresh">Refresh</string>
+</resources>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.details.DetailsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            android:background="@color/lilac_light"
+            app:collapsedTitleTextColor="@color/white"
+            app:expandedTitleMarginBottom="@dimen/space_32"
+            app:expandedTitleTextColor="@color/white"
+            app:maxLines="2">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/lilac_light"
+                android:elevation="0dp"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:navigationIconTint="@color/white"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progressBar"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="90dp"
+                android:indeterminate="true"
+                android:progress="45"
+                android:visibility="gone"
+                app:indicatorColor="@color/lilac_light"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/errorMassage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading_error_try_again_later"
+                android:textSize="@dimen/font_22"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/restaurantImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/space_8"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/content_start"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/space_16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/content_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/space_16" />
+
+            <TextView
+                android:id="@+id/imageCuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintTop_toBottomOf="@id/restaurantImage"
+                tools:text="🇷🇴" />
+
+            <TextView
+                android:id="@+id/cuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_4"
+                app:layout_constraintBottom_toBottomOf="@id/imageCuisine"
+                app:layout_constraintStart_toEndOf="@id/imageCuisine"
+                app:layout_constraintTop_toTopOf="@id/imageCuisine"
+                tools:text="USA" />
+
+
+            <ImageView
+                android:id="@+id/imgStarsRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_4"
+                android:src="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="@id/starsRestaurant"
+                app:layout_constraintEnd_toStartOf="@id/starsRestaurant"
+                app:layout_constraintTop_toTopOf="@id/starsRestaurant" />
+
+            <TextView
+                android:id="@+id/starsRestaurant"
+                style="@style/TextDefaultStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_4"
+                android:layout_marginTop="@dimen/space_16"
+                android:textColor="@color/lilac_light"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintTop_toBottomOf="@id/restaurantImage"
+                tools:text="3.0" />
+
+
+            <ImageView
+                android:id="@+id/imgAddressRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_24"
+                android:src="@drawable/ic_tag"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintTop_toBottomOf="@id/imageCuisine" />
+
+
+            <TextView
+                android:id="@+id/addressRestaurant"
+                style="@style/TextDefaultStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_4"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintBottom_toBottomOf="@id/imgAddressRestaurant"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintStart_toEndOf="@id/imgAddressRestaurant"
+                app:layout_constraintTop_toTopOf="@id/imgAddressRestaurant"
+                tools:text="250 West 77th Street, Manhattan" />
+
+            <ImageView
+                android:id="@+id/imgDistanceRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space_12"
+                android:src="@drawable/ic_nav"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintTop_toBottomOf="@id/addressRestaurant" />
+
+            <TextView
+                android:id="@+id/distanceRestaurant"
+                style="@style/TextDefaultStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_4"
+                app:layout_constraintBottom_toBottomOf="@id/imgDistanceRestaurant"
+                app:layout_constraintEnd_toStartOf="@+id/content_end"
+                app:layout_constraintStart_toEndOf="@id/imgDistanceRestaurant"
+                app:layout_constraintTop_toTopOf="@id/imgDistanceRestaurant"
+                tools:text="99.9 from center" />
+
+
+            <ImageView
+                android:id="@+id/imgCoordinates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_12"
+                android:src="@drawable/ic_coordinates"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintTop_toBottomOf="@id/imgDistanceRestaurant" />
+
+            <TextView
+                android:id="@+id/coordinates"
+                style="@style/TextDefaultStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_4"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@id/imgCoordinates"
+                app:layout_constraintEnd_toStartOf="@+id/content_end"
+                app:layout_constraintStart_toEndOf="@id/imgCoordinates"
+                app:layout_constraintTop_toTopOf="@id/imgCoordinates"
+                tools:text="40.7933995,-73.97285789" />
+
+
+            <TextView
+                android:id="@+id/tvSuitesAvailabilityRestaurant"
+                style="@style/TextDefaultStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:text="@string/free_tables"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintTop_toBottomOf="@id/imgCoordinates" />
+
+            <TextView
+                android:id="@+id/suitesAvailabilityRestaurant"
+                style="@style/TextDefaultStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_4"
+                app:layout_constraintBottom_toBottomOf="@id/tvSuitesAvailabilityRestaurant"
+                app:layout_constraintEnd_toStartOf="@+id/content_end"
+                app:layout_constraintStart_toEndOf="@id/tvSuitesAvailabilityRestaurant"
+                app:layout_constraintTop_toTopOf="@id/tvSuitesAvailabilityRestaurant"
+                tools:text="1:44:21:87:99:34" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_menu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:layout_marginBottom="@dimen/space_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/content_end"
+                app:layout_constraintStart_toStartOf="@id/content_start"
+                app:layout_constraintTop_toBottomOf="@id/suitesAvailabilityRestaurant" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

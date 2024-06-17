@@ -1,0 +1,36 @@
+[versions]
+androidx-junit = "1.1.5"
+agp = "8.2.0"
+kotlin = "1.9.10"
+appcompat = "1.7.0"
+compiler = "4.14.2"
+constraintlayout = "2.1.4"
+core-ktx = "1.13.1"
+espresso-core = "3.5.1"
+glide = "4.16.0"
+junit = "4.13.2"
+koin-android = "3.3.0"
+material = "1.12.0"
+navigation-ui-ktx = "2.7.7"
+navigation-fragment-ktx = "2.7.7"
+retrofit = "2.9.0"
+
+[libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso-core" }
+androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-junit" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation-ui-ktx" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation-fragment-ktx" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+junit = { module = "junit:junit", version.ref = "junit" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-android" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetBrainsKotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

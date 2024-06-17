@@ -1,0 +1,12 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ListRestaurant" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorOnSecondary">@color/on_surface_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/light_gray</item>
+
+    </style>
+
+    <style name="Theme.ListHotels" parent="Base.Theme.ListRestaurant" />
+</resources>
